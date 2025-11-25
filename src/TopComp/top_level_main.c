@@ -45,7 +45,7 @@
 #include "../BipsPl/flag_supp.h"
 #include "copying.c"
 
-
+#include "top_level_main.h"
 
 
 
@@ -90,7 +90,8 @@ Prolog_Prototype(EXEC_CMD_LINE_GOAL, 1);
  * See comments in EnginePl/main.c about the use of the wrapper function.  *
  *-------------------------------------------------------------------------*/
 
-static int
+// extern "C"  __declspec(dllexport)
+int
 Main_Wrapper(int argc, char *argv[])
 {
   int i;
@@ -228,11 +229,11 @@ Main_Wrapper(int argc, char *argv[])
   return 0;
 }
 
-int
-main(int argc, char *argv[])
-{
-  return Main_Wrapper(argc, argv);
-}
+// int
+// main(int argc, char *argv[])
+// {
+//   return Main_Wrapper(argc, argv);
+// }
 
 
 /*-------------------------------------------------------------------------*
