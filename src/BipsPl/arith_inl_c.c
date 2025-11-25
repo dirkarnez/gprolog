@@ -159,7 +159,7 @@ static WamWord Load_Math_Expression(WamWord exp_word);
   evaluable_info.f_n = Functor_Arity(Pl_Create_Atom(atom_str), arity); \
   evaluable_info.signat_atom = Pl_Create_Atom(signat_str);             \
   evaluable_info.is_iso = iso;             			       \
-  evaluable_info.fct = f;                                              \
+  evaluable_info.fct = (void*)f;                                              \
   Pl_Hash_Insert(evaluable_tbl, (char *) &evaluable_info, FALSE)
 
 
