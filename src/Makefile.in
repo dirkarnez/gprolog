@@ -66,7 +66,9 @@ doc:
 install-strip:
 	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' install
 
-install: install-system install-doc install-html install-examples install-links
+install: install-system install-examples install-links
+
+# install-doc install-html
 
 install-system:
 	./mkinstalldirs $(INSTALL_DIR) $(INSTALL_DIR)/bin \
